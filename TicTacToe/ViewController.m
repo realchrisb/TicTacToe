@@ -21,6 +21,7 @@
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *buttons;
 
 @property (weak, nonatomic) IBOutlet UILabel *whichPlayerLabel;
+@property NSString *whoWon;
 
 @end
 
@@ -38,33 +39,44 @@
                 self.whichPlayerLabel.text = @"X";
             }
         }
-    }
-    NSString *whoWon = @"X";
     
-    if (self.ButtonOne.title == self.ButtonTwo.title == self.ButtonThree.title) {
+    
+    if ((self.ButtonOne.titleLabel.text == self.ButtonTwo.titleLabel.text) && (self.ButtonOne.titleLabel.text == self.ButtonThree.titleLabel.text)) {
+        self.whoWon = self.ButtonOne.titleLabel.text;
+        NSLog(@"We got a winner: %@", self.ButtonOne.titleLabel.text);
+        }
+
+    }
+    
+    /*
+    else if (self.ButtonFour.titleLabel == self.ButtonFive.titleLabel == self.ButtonSix.titleLabel) {
         [self.whoWon stringWithFormat:@"%@", self.whichPlayerLabel.text]
     }
-    else if (self.ButtonFour.title == self.ButtonFive.title == self.ButtonSix.title) {
+    else if (self.ButtonSeven.titleLabel == self.ButtonEight.titleLabel == self.ButtonNine.titleLabel) {
         [self.whoWon stringWithFormat:@"%@", self.whichPlayerLabel.text]
     }
-    else if (self.ButtonSeven.title == self.ButtonEight.title == self.ButtonNine.title) {
+    else if (self.ButtonOne.titleLabel == self.ButtonFour.titleLabel == self.ButtonSeven.titleLabel) {
         [self.whoWon stringWithFormat:@"%@", self.whichPlayerLabel.text]
     }
-    else if (self.ButtonOne.title == self.ButtonFour.title == self.ButtonSeven.title) {
+    else if (self.ButtonTwo.titleLabel == self.ButtonFive.titleLabel == self.ButtonEight.titleLabel) {
         [self.whoWon stringWithFormat:@"%@", self.whichPlayerLabel.text]
     }
-    else if (self.ButtonTwo.title == self.ButtonFive.title == self.ButtonEight.title) {
+    else if (self.ButtonThree.titleLabel == self.ButtonSix.titleLabel == self.ButtonNine.titleLabel) {
         [self.whoWon stringWithFormat:@"%@", self.whichPlayerLabel.text]
     }
-    else if (self.ButtonThree.title == self.ButtonSix.title == self.ButtonNine.title) {
+    else if (self.ButtonOne.titleLabel == self.ButtonFive.titleLabel == self.ButtonNine.titleLabel) {
         [self.whoWon stringWithFormat:@"%@", self.whichPlayerLabel.text]
     }
-    else if (self.ButtonOne.title == self.ButtonFive.title == self.ButtonNine.title) {
+    else if (self.ButtonThree.titleLabel == self.ButtonFive.titleLabel == self.ButtonSeven.titleLabel) {
         [self.whoWon stringWithFormat:@"%@", self.whichPlayerLabel.text]
-    }
-    else if (self.ButtonThree.title == self.ButtonFive.title == self.ButtonSeven.title) {
-        [self.whoWon stringWithFormat:@"%@", self.whichPlayerLabel.text]
-    }
+    }*/
+    
+    
+    
+    
+    
+    
+    
     
 //    if (sender == self.ButtonOne) {
 //        NSLog(@"yo");
