@@ -27,6 +27,10 @@
 
 
 - (IBAction)onButtonTapped:(UIButton *)sender {
+    
+    if (sender == self.ButtonOne) {
+        NSLog(@"yo");
+    }
     self.whichPlayerLabel.text = [NSString stringWithFormat:@"X"];
     
     if ((self.whichPlayerLabel.text = @"X")) {

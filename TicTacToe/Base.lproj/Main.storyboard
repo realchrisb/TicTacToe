@@ -16,6 +16,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="GHP-wL-3Vb">
                                 <rect key="frame" x="28" y="93" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="1"/>
                                 <connections>
                                     <action selector="onButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ihx-P3-ZkZ"/>
                                 </connections>
@@ -91,7 +92,7 @@
                         <outlet property="ButtonFive" destination="0Ts-pB-ObU" id="9qh-qL-pdR"/>
                         <outlet property="ButtonFour" destination="eIx-73-9gO" id="fdl-41-Ith"/>
                         <outlet property="ButtonNine" destination="hYs-b2-hwb" id="F3O-jH-aV7"/>
-                        <outlet property="ButtonOne" destination="37t-0V-jSa" id="FmW-OL-qfL"/>
+                        <outlet property="ButtonOne" destination="GHP-wL-3Vb" id="1Be-lD-TAO"/>
                         <outlet property="ButtonSeven" destination="9Ou-6d-W4g" id="gLB-9g-uPL"/>
                         <outlet property="ButtonSix" destination="onG-z4-cnG" id="dNe-Xa-hzA"/>
                         <outlet property="ButtonThree" destination="f5L-qr-zhL" id="JID-yH-D0c"/>
