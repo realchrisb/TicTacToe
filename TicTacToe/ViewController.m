@@ -32,6 +32,7 @@
     for (UIButton *button in self.buttons) {
         if (button == sender) {
             [button setTitle:self.whichPlayerLabel.text forState:UIControlStateNormal];
+            NSLog(@"Which Player Label: %@, Button Label: %@", self.whichPlayerLabel.text, button.titleLabel.text);
             
             if ([self.whichPlayerLabel.text isEqualToString:@"X"]) {
                 self.whichPlayerLabel.text = @"O";
@@ -39,14 +40,16 @@
                 self.whichPlayerLabel.text = @"X";
             }
         }
+    }
     
-    
+ //       NSLog(@"Button One: %@, Button Two: %@, Button Three: %@", self.ButtonOne.titleLabel.text, self.ButtonTwo.titleLabel.text, self.ButtonThree.titleLabel.text);
+        
     if ((self.ButtonOne.titleLabel.text == self.ButtonTwo.titleLabel.text) && (self.ButtonOne.titleLabel.text == self.ButtonThree.titleLabel.text)) {
         self.whoWon = self.ButtonOne.titleLabel.text;
-        NSLog(@"We got a winner: %@", self.ButtonOne.titleLabel.text);
+//        NSLog(@"We got a winner: %@", self.ButtonOne.titleLabel.text);
         }
 
-    }
+    
     
     /*
     else if (self.ButtonFour.titleLabel == self.ButtonFive.titleLabel == self.ButtonSix.titleLabel) {
