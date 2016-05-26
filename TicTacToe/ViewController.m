@@ -31,7 +31,39 @@
     for (UIButton *button in self.buttons) {
         if (button == sender) {
             [button setTitle:self.whichPlayerLabel.text forState:UIControlStateNormal];
+            
+            if ([self.whichPlayerLabel.text isEqualToString:@"X"]) {
+                self.whichPlayerLabel.text = @"O";
+            } else if ([self.whichPlayerLabel.text isEqualToString:@"O"]){
+                self.whichPlayerLabel.text = @"X";
+            }
         }
+    }
+    NSString *whoWon = @"X";
+    
+    if (self.ButtonOne.title == self.ButtonTwo.title == self.ButtonThree.title) {
+        [self.whoWon stringWithFormat:@"%@", self.whichPlayerLabel.text]
+    }
+    else if (self.ButtonFour.title == self.ButtonFive.title == self.ButtonSix.title) {
+        [self.whoWon stringWithFormat:@"%@", self.whichPlayerLabel.text]
+    }
+    else if (self.ButtonSeven.title == self.ButtonEight.title == self.ButtonNine.title) {
+        [self.whoWon stringWithFormat:@"%@", self.whichPlayerLabel.text]
+    }
+    else if (self.ButtonOne.title == self.ButtonFour.title == self.ButtonSeven.title) {
+        [self.whoWon stringWithFormat:@"%@", self.whichPlayerLabel.text]
+    }
+    else if (self.ButtonTwo.title == self.ButtonFive.title == self.ButtonEight.title) {
+        [self.whoWon stringWithFormat:@"%@", self.whichPlayerLabel.text]
+    }
+    else if (self.ButtonThree.title == self.ButtonSix.title == self.ButtonNine.title) {
+        [self.whoWon stringWithFormat:@"%@", self.whichPlayerLabel.text]
+    }
+    else if (self.ButtonOne.title == self.ButtonFive.title == self.ButtonNine.title) {
+        [self.whoWon stringWithFormat:@"%@", self.whichPlayerLabel.text]
+    }
+    else if (self.ButtonThree.title == self.ButtonFive.title == self.ButtonSeven.title) {
+        [self.whoWon stringWithFormat:@"%@", self.whichPlayerLabel.text]
     }
     
 //    if (sender == self.ButtonOne) {
@@ -39,19 +71,10 @@
 //        [self.ButtonOne.text stringWithFormat:@"%@", self.whichPlayerLabel.text];
 //    }
     
-    self.whichPlayerLabel.text = [NSString stringWithFormat:@"X"];
-    
-    if ([self.whichPlayerLabel.text isEqualToString:@"X"]) {
-        self.whichPlayerLabel.text = @"O";
-    } else if ([self.whichPlayerLabel.text isEqualToString:@"O"]){
-        self.whichPlayerLabel.text = @"X";
-    }
-    NSLog(@"%@", self.whichPlayerLabel.text);
+    // self.whichPlayerLabel.text = [NSString stringWithFormat:@"X"];
     
     
-
-
-
+    // NSLog(@"%@", self.whichPlayerLabel.text);
 
 }
 
